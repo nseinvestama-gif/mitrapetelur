@@ -6,19 +6,17 @@
     <title>PT RA FARM INDONESIA - Linkbio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #f0f2f5;
-            --card-bg: #ffffff;
-            --text-color: #1a1a1a;
-            --secondary-text: #65676b;
-            --accent-color: #25D366; /* WhatsApp Green */
-            --button-bg: #ffffff;
-            --button-text: #1a1a1a;
-            --button-border: #dfe3e8;
-            --button-hover: #f8f9fa;
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --secondary-text: #e0e0e0;
+            --accent-color: #ff914d;
+            --button-bg: #ff914d;
+            --button-text: #ffffff;
+            --button-hover: #ff7f2a;
         }
 
         * {
@@ -28,8 +26,12 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: var(--bg-color);
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: var(--text-color);
             line-height: 1.5;
             display: flex;
@@ -37,6 +39,18 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: 0;
         }
 
         .container {
@@ -45,6 +59,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
 
         /* Profile Section */
@@ -52,6 +68,7 @@
             text-align: center;
             margin-bottom: 30px;
             width: 100%;
+            margin-top: 40px;
         }
 
         .profile-image {
@@ -60,9 +77,9 @@
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
             margin-bottom: 16px;
-            background-color: #ddd; /* Placeholder */
+            background-color: #fff;
         }
 
         .profile-title {
@@ -70,12 +87,16 @@
             font-weight: 700;
             margin-bottom: 8px;
             color: var(--text-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .profile-bio {
             font-size: 14px;
-            color: var(--secondary-text);
-            white-space: pre-line; /* Allows newlines in text */
+            color: var(--text-color);
+            white-space: pre-line;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         /* Links Section */
@@ -83,28 +104,26 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 16px;
         }
 
         .link-card {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center; /* Center content */
             background-color: var(--button-bg);
-            border: 1px solid var(--button-border);
-            border-radius: 50px; /* Pill shape */
+            border: none;
+            border-radius: 25px; /* specific radius */
             padding: 16px 24px;
             text-decoration: none;
             color: var(--button-text);
-            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+            transition: transform 0.2s, background-color 0.2s;
             position: relative;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .link-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             background-color: var(--button-hover);
         }
 
@@ -112,30 +131,29 @@
             font-size: 24px;
             width: 30px;
             text-align: center;
-            color: var(--text-color);
+            color: var(--button-text);
+            position: absolute;
+            left: 20px;
         }
         
-        .link-icon.wa { color: #25D366; }
-        .link-icon.tele { color: #0088cc; }
-        .link-icon.insta { color: #E1306C; }
+        .link-icon.wa, .link-icon.tele, .link-icon.insta { color: var(--button-text); }
 
         .link-text {
-            flex: 1;
             text-align: center;
             font-weight: 600;
             font-size: 15px;
+            width: 100%;
         }
 
         .link-arrow {
-            opacity: 0; /* Hide arrow for cleaner look or show if preferred */
-            width: 24px; 
+            display: none;
         }
 
         /* Footer */
         .footer {
             margin-top: 40px;
             font-size: 12px;
-            color: #888;
+            color: rgba(255, 255, 255, 0.7);
             text-align: center;
         }
 
@@ -179,6 +197,108 @@
                 <div class="link-arrow"></div>
             </a>
 
+            <!-- Paket Section -->
+            <h2 style="color: white; font-size: 18px; margin: 20px 0 10px; text-align: center; font-weight: 600;">PAKET KEMITRAAN</h2>
+
+            <div class="link-card" style="flex-direction: column; align-items: flex-start; text-align: left; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                    <strong style="font-size: 16px; color: #ff914d;">BRONZE</strong>
+                    <span style="font-size: 12px; background: #ff914d; color: white; padding: 2px 8px; border-radius: 10px;">Best Starter</span>
+                </div>
+                <div style="font-size: 14px; color: white; width: 100%;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                        <span>Modal:</span>
+                        <strong>Rp 1.000.000</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Potensi:</span>
+                        <strong style="color: #4cd964;">Rp 20.000.000</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="link-card" style="flex-direction: column; align-items: flex-start; text-align: left; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                    <strong style="font-size: 16px; color: #ff914d;">SILVER</strong>
+                </div>
+                <div style="font-size: 14px; color: white; width: 100%;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                        <span>Modal:</span>
+                        <strong>Rp 1.800.000</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Potensi:</span>
+                        <strong style="color: #4cd964;">Rp 50.000.000</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="link-card" style="flex-direction: column; align-items: flex-start; text-align: left; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                    <strong style="font-size: 16px; color: #ff914d;">GOLD</strong>
+                    <span style="font-size: 12px; background: #ff914d; color: white; padding: 2px 8px; border-radius: 10px;">Popular</span>
+                </div>
+                <div style="font-size: 14px; color: white; width: 100%;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                        <span>Modal:</span>
+                        <strong>Rp 2.500.000</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Potensi:</span>
+                        <strong style="color: #4cd964;">Rp 80.000.000</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="link-card" style="flex-direction: column; align-items: flex-start; text-align: left; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                    <strong style="font-size: 16px; color: #ff914d;">PLATINUM</strong>
+                </div>
+                <div style="font-size: 14px; color: white; width: 100%;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                        <span>Modal:</span>
+                        <strong>Rp 3.400.000</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Potensi:</span>
+                        <strong style="color: #4cd964;">Rp 120.000.000</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="link-card" style="flex-direction: column; align-items: flex-start; text-align: left; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                    <strong style="font-size: 16px; color: #ff914d;">DIAMOND</strong>
+                </div>
+                <div style="font-size: 14px; color: white; width: 100%;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                        <span>Modal:</span>
+                        <strong>Rp 5.500.000</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Potensi:</span>
+                        <strong style="color: #4cd964;">Rp 150.000.000</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="link-card" style="flex-direction: column; align-items: flex-start; text-align: left; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                    <strong style="font-size: 16px; color: #ff914d;">SUPER VVIP</strong>
+                    <span style="font-size: 12px; background: #e0ac00; color: white; padding: 2px 8px; border-radius: 10px;">Exclusive</span>
+                </div>
+                <div style="font-size: 14px; color: white; width: 100%;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                        <span>Modal:</span>
+                        <strong>Rp 10.000.000</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Potensi:</span>
+                        <strong style="color: #4cd964;">Rp 300.000.000</strong>
+                    </div>
+                </div>
+            </div>
+            
             <a href="#" class="link-card">
                 <i class="fab fa-telegram link-icon tele"></i>
                 <span class="link-text">TELEGRAM CHANNEL</span>
