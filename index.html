@@ -122,11 +122,35 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .link-card:hover {
-            transform: translateY(-2px);
-            background-color: var(--button-hover);
+        .link-card.wa {
+            background: #25D366;
+            color: white;
+            border: none;
+        }
+        
+        .link-card.insta {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            border: none;
+        }
+        
+        .link-card.tele {
+            background: #0088cc;
+            color: white;
+            border: none;
+        }
+        
+        .link-card.pdf {
+            background: #E1306C; /* Or a neutral color */
+            background: #333;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
         }
 
+        .link-card:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
         .link-icon {
             font-size: 24px;
             width: 30px;
@@ -136,8 +160,6 @@
             left: 20px;
         }
         
-        .link-icon.wa, .link-icon.tele, .link-icon.insta { color: var(--button-text); }
-
         .link-text {
             text-align: center;
             font-weight: 600;
@@ -191,26 +213,26 @@
 
         <!-- Links -->
         <div class="links-section">
-            <a href="https://wa.me/6285825408081" target="_blank" class="link-card">
-                <i class="fab fa-whatsapp link-icon wa"></i>
+            <a href="https://wa.me/6285825408081" target="_blank" class="link-card wa">
+                <i class="fab fa-whatsapp link-icon" style="color: white;"></i>
                 <span class="link-text">WHATSAPP ADMIN</span>
                 <div class="link-arrow"></div>
             </a>
             
-            <a href="#" class="link-card">
-                <i class="fab fa-instagram link-icon insta"></i>
+            <a href="#" class="link-card insta">
+                <i class="fab fa-instagram link-icon" style="color: white;"></i>
                 <span class="link-text">INSTAGRAM</span>
                 <div class="link-arrow"></div>
             </a>
             
-            <a href="#" class="link-card">
-                <i class="fab fa-telegram link-icon tele"></i>
+            <a href="#" class="link-card tele">
+                <i class="fab fa-telegram link-icon" style="color: white;"></i>
                 <span class="link-text">TELEGRAM CHANNEL</span>
                 <div class="link-arrow"></div>
             </a>
 
-            <a href="#" class="link-card">
-                <i class="fas fa-file-pdf link-icon"></i>
+            <a href="#" class="link-card pdf">
+                <i class="fas fa-file-pdf link-icon" style="color: white;"></i>
                 <span class="link-text">DOWNLOAD PROPOSAL</span>
                 <div class="link-arrow"></div>
             </a>
