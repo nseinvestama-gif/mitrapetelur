@@ -229,22 +229,25 @@
                 /* Info Box Style */
                 .info-box {
                     width: 100%;
-                    border: 1px solid rgba(255,255,255,0.3);
-                    border-radius: 15px;
-                    padding: 20px;
+                    border: 1px solid rgba(255,255,255,0.2);
+                    border-radius: 20px;
+                    padding: 25px;
                     margin-top: 20px;
-                    background: rgba(0,0,0,0.3);
-                    backdrop-filter: blur(5px);
+                    background: rgba(255, 255, 255, 0.05); /* Glass effect matching package cards */
+                    backdrop-filter: blur(10px);
                     text-align: left;
                     font-size: 14px;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
                 }
                 
                 .info-box h3 {
-                    font-size: 16px;
-                    margin-bottom: 10px;
+                    font-size: 18px;
+                    margin-bottom: 15px;
                     display: flex;
                     align-items: center;
                     gap: 8px;
+                    font-weight: 700;
+                    color: white;
                 }
                 
                 .info-box ul {
@@ -254,63 +257,78 @@
                 }
                 
                 .info-box ul li {
-                    margin-bottom: 8px;
-                    padding-left: 20px;
+                    margin-bottom: 10px;
+                    padding-left: 25px;
                     position: relative;
+                    line-height: 1.6;
                 }
                 
                 .info-box ul li::before {
-                    content: '✓';
+                    content: '✔';
                     position: absolute;
                     left: 0;
                     color: #4cd964;
                     font-weight: bold;
+                    font-size: 16px;
                 }
                 
                 .highlight-text {
                     color: #ff914d;
                     font-weight: 700;
+                    display: block;
+                    margin-top: 20px;
+                    margin-bottom: 5px;
+                    font-size: 16px;
+                }
+                
+                .sub-highlight {
+                    font-size: 13px; 
+                    font-style: italic; 
+                    color: #ccc;
+                    margin-bottom: 15px;
+                    display: block;
                 }
             </style>
 
-            <!-- Info Section -->
+            <!-- Info Section Combined -->
             <div class="info-box">
-                <h3><i class="fas fa-home"></i> PT RA FARM INDONESIA</h3>
-                <p style="margin-bottom: 15px;">☀️ <strong>Kemitraan Ayam Petelur Terbaik & Terpercaya</strong> ☀️</p>
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <h3 style="justify-content: center; font-size: 22px; margin-bottom: 10px;">🐔 PT RA FARM INDONESIA</h3>
+                    <p style="color: #ffd700; font-weight: 600;">🌟 Kemitraan Ayam Petelur Terbaik & Terpercaya 🌟</p>
+                </div>
                 
-                <p class="highlight-text" style="margin-bottom: 5px;">🔴 SISTEM BAGI HASIL</p>
-                <p style="margin-bottom: 15px; font-size: 13px; font-style: italic;">HARAP DIBACA & DIPAHAMI</p>
+                <span class="highlight-text">🔹 SISTEM BAGI HASIL</span>
+                <span class="sub-highlight">HARAP DIBACA & DIPAHAMI</span>
                 
                 <ul>
                     <li>Kontrak 100 Hari / 10x Panen</li>
                     <li>Pembagian hasil setiap 10 hari</li>
                     <li>Investor & Peternak sama-sama untung</li>
                 </ul>
-            </div>
-            
-            <div class="info-box">
-                <h3 class="highlight-text">KEUNGGULAN KAMI</h3>
+                
+                <span class="highlight-text">🔹 KEUNGGULAN PT RA FARM INDONESIA</span>
+                
                 <ul>
-                    <li>Legalitas & MOU resmi</li>
+                    <li style="margin-top: 10px;">Legalitas & MOU resmi</li>
                     <li>Pengelolaan profesional</li>
                     <li>Laporan panen transparan</li>
                     <li>Bisa investasi pasif → duduk santai, tetap untung</li>
                 </ul>
                 
-                <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 15px 0;">
+                <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
                 
-                <p style="margin-bottom: 10px;"><strong>Setiap kali panen, keuntungan bersih dibagi rata:</strong></p>
-                <ul>
+                <p style="margin-bottom: 15px; font-weight: 600;">Setiap kali panen, keuntungan bersih dibagi rata:</p>
+                <ul style="margin-bottom: 20px;">
                     <li style="color: #4cd964;">50% untuk Anda (MITRA)</li>
                     <li style="color: #ff914d;">50% untuk kami (Pengelola)</li>
                 </ul>
-            </div>
-            
-            <div class="info-box">
-                <h3 style="color: #ffd700;">💡 Contoh Simulasi Paket BRONZE:</h3>
-                <p><strong>Modal: Rp 1.000.000</strong></p>
-                <p>Estimasi hasil Bersih 1x Panen: Rp 20.000.000</p>
-                <p style="margin-top: 5px;">👉 <strong>Maka Anda menerima: Rp 10.000.000/Panen</strong></p>
+                
+                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                    <h4 style="color: #ffd700; margin-bottom: 10px; font-size: 16px;">💡 Contoh Simulasi Paket BRONZE:</h4>
+                    <p style="margin-bottom: 5px;">Modal: <strong>Rp 1.000.000</strong></p>
+                    <p style="margin-bottom: 5px;">Estimasi hasil Bersih 1x Panen: <strong>Rp 20.000.000</strong></p>
+                    <p style="margin-top: 10px; color: #4cd964; font-weight: 700; font-size: 16px;">👉 Maka Anda menerima: Rp 10.000.000/Panen</p>
+                </div>
             </div>
             
             <div class="info-box" style="text-align: center; border: 1px solid #ff914d;">
