@@ -224,18 +224,6 @@
                 <span class="link-text">INSTAGRAM</span>
                 <div class="link-arrow"></div>
             </a>
-            
-            <a href="#" class="link-card tele">
-                <i class="fab fa-telegram link-icon" style="color: white;"></i>
-                <span class="link-text">TELEGRAM CHANNEL</span>
-                <div class="link-arrow"></div>
-            </a>
-
-            <a href="#" class="link-card pdf">
-                <i class="fas fa-file-pdf link-icon" style="color: white;"></i>
-                <span class="link-text">DOWNLOAD PROPOSAL</span>
-                <div class="link-arrow"></div>
-            </a>
 
             <style>
                 /* Info Box Style */
@@ -343,15 +331,17 @@
                     margin-bottom: 20px;
                     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
                     border: 1px solid rgba(255,255,255,0.2);
-                    height: 200px; /* Tinggi fix untuk menampilkan gambar saja */
+                    aspect-ratio: 1 / 1; /* Membuat kartu menjadi persegi sesuai screenshot (full gambar) */
                     display: flex;
                     align-items: flex-end; /* Tombol di bawah */
                 }
 
                 .package-overlay {
                     width: 100%;
-                    padding: 15px;
-                    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+                    padding: 20px;
+                    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+                    display: flex;
+                    justify-content: center;
                 }
 
                 .btn-select {
