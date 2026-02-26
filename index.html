@@ -71,15 +71,38 @@
             margin-top: 40px;
         }
 
+        .profile-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
         .profile-image {
-            width: 96px;
-            height: 96px;
+            width: 140px; /* Diperbesar */
+            height: 140px; /* Diperbesar */
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #fff;
+            border: 1px solid #fff; /* List putih diperkecil (lebih tipis) */
             box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            margin-bottom: 16px;
             background-color: #fff;
+            display: block;
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            color: #1DA1F2; /* Warna biru centang */
+            background: white;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            border: 2px solid #fff; /* Border putih di sekeliling centang */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .profile-title {
@@ -196,7 +219,10 @@
         <!-- Profile -->
         <div class="profile-section">
             <!-- Ganti src dengan URL gambar logo Anda -->
-            <img src="logo.png" alt="Logo PT RA FARM INDONESIA" class="profile-image">
+            <div class="profile-wrapper">
+                <img src="logo.png" alt="Logo PT RA FARM INDONESIA" class="profile-image">
+                <div class="verified-badge"><i class="fas fa-check-circle"></i></div>
+            </div>
             
             <h1 class="profile-title">PT RA FARM INDONESIA</h1>
             
@@ -213,15 +239,15 @@
 
         <!-- Links -->
         <div class="links-section">
-            <a href="https://wa.me/6285825408081" target="_blank" class="link-card wa">
+            <a href="https://wa.me/6281244566790" target="_blank" class="link-card wa">
                 <i class="fab fa-whatsapp link-icon" style="color: white;"></i>
                 <span class="link-text">WHATSAPP ADMIN</span>
                 <div class="link-arrow"></div>
             </a>
             
-            <a href="#" class="link-card insta">
+            <a href="https://instagram.com/pt.ra_farmindonesia" target="_blank" class="link-card insta">
                 <i class="fab fa-instagram link-icon" style="color: white;"></i>
-                <span class="link-text">INSTAGRAM</span>
+                <span class="link-text">@pt.ra_farmindonesia</span>
                 <div class="link-arrow"></div>
             </a>
 
