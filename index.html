@@ -317,31 +317,58 @@
                 <h3 style="justify-content: center;">CARA BERGABUNG MITRA USAHA</h3>
             </div>
 
+            <!-- Rantai Distribusi & Pilihan Paket -->
+            <div style="width: 100%; margin: 20px 0;">
+                <img src="rantai distribusi.png" alt="Rantai Distribusi" style="width: 100%; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.2);">
+                <img src="pilihan paket.jpg" alt="Pilihan Paket Titip Modal" style="width: 100%; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2);">
+            </div>
+
             <!-- Paket Section -->
             <h2 style="color: white; font-size: 24px; margin: 30px 0 20px; text-align: center; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">PILIHAN PAKET INVESTASI</h2>
 
             <style>
                 .package-card {
                     width: 100%;
-                    background-size: cover;
-                    background-position: center;
+                    background: rgba(255, 255, 255, 0.05); /* Glass background */
+                    border: 1px solid rgba(255, 255, 255, 0.2);
                     border-radius: 20px;
                     overflow: hidden;
                     position: relative;
                     margin-bottom: 20px;
                     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-                    border: 1px solid rgba(255,255,255,0.2);
-                    aspect-ratio: 1 / 1; /* Membuat kartu menjadi persegi sesuai screenshot (full gambar) */
+                    backdrop-filter: blur(10px);
+                    padding: 15px;
                     display: flex;
-                    align-items: flex-end; /* Tombol di bawah */
+                    flex-direction: column;
+                    align-items: center;
                 }
 
-                .package-overlay {
+                .package-image {
                     width: 100%;
-                    padding: 20px;
-                    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
-                    display: flex;
-                    justify-content: center;
+                    border-radius: 15px;
+                    margin-bottom: 15px;
+                    display: block;
+                }
+
+                .package-content {
+                    width: 100%;
+                    text-align: left;
+                }
+
+                .package-title-text {
+                    font-size: 20px;
+                    font-weight: 800;
+                    color: white;
+                    text-transform: uppercase;
+                    margin-bottom: 2px;
+                }
+
+                .package-subtitle {
+                    font-size: 12px;
+                    color: #ddd;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+                    letter-spacing: 1px;
                 }
 
                 .btn-select {
@@ -357,7 +384,7 @@
                     text-align: center;
                     transition: transform 0.2s, background 0.2s;
                     box-shadow: 0 4px 10px rgba(255, 145, 77, 0.4);
-                    border: 2px solid white;
+                    border: none;
                 }
 
                 .btn-select:hover {
@@ -367,8 +394,11 @@
             </style>
 
             <!-- BRONZE -->
-            <div class="package-card" style="background-image: url('bronze.png');">
-                <div class="package-overlay">
+            <div class="package-card">
+                <img src="bronze.png" alt="Paket Bronze" class="package-image">
+                <div class="package-content">
+                    <h3 class="package-title-text">PAKET BRONZE</h3>
+                    <p class="package-subtitle">PT RA FARM INDONESIA</p>
                     <a href="https://wa.me/6285825408081?text=Halo%20Admin%2C%20saya%20tertarik%20dengan%20PAKET%20BRONZE%20(Rp%201.000.000)" target="_blank" class="btn-select">
                         Klik / Pilih Paket BRONZE
                     </a>
@@ -376,8 +406,11 @@
             </div>
 
             <!-- SILVER -->
-            <div class="package-card" style="background-image: url('silver.png');">
-                <div class="package-overlay">
+            <div class="package-card">
+                <img src="silver.png" alt="Paket Silver" class="package-image">
+                <div class="package-content">
+                    <h3 class="package-title-text">PAKET SILVER</h3>
+                    <p class="package-subtitle">PT RA FARM INDONESIA</p>
                     <a href="https://wa.me/6285825408081?text=Halo%20Admin%2C%20saya%20tertarik%20dengan%20PAKET%20SILVER%20(Rp%201.800.000)" target="_blank" class="btn-select">
                         Klik / Pilih Paket SILVER
                     </a>
@@ -385,8 +418,11 @@
             </div>
 
             <!-- GOLD -->
-            <div class="package-card" style="background-image: url('gold.png');">
-                <div class="package-overlay">
+            <div class="package-card">
+                <img src="gold.png" alt="Paket Gold" class="package-image">
+                <div class="package-content">
+                    <h3 class="package-title-text">PAKET GOLD</h3>
+                    <p class="package-subtitle">PT RA FARM INDONESIA</p>
                     <a href="https://wa.me/6285825408081?text=Halo%20Admin%2C%20saya%20tertarik%20dengan%20PAKET%20GOLD%20(Rp%202.500.000)" target="_blank" class="btn-select">
                         Klik / Pilih Paket GOLD
                     </a>
@@ -394,8 +430,11 @@
             </div>
 
             <!-- PLATINUM -->
-            <div class="package-card" style="background-image: url('platinum.png');">
-                <div class="package-overlay">
+            <div class="package-card">
+                <img src="platinum.png" alt="Paket Platinum" class="package-image">
+                <div class="package-content">
+                    <h3 class="package-title-text">PAKET PLATINUM</h3>
+                    <p class="package-subtitle">PT RA FARM INDONESIA</p>
                     <a href="https://wa.me/6285825408081?text=Halo%20Admin%2C%20saya%20tertarik%20dengan%20PAKET%20PLATINUM%20(Rp%203.400.000)" target="_blank" class="btn-select">
                         Klik / Pilih Paket PLATINUM
                     </a>
@@ -403,8 +442,11 @@
             </div>
 
             <!-- DIAMOND -->
-            <div class="package-card" style="background-image: url('diamond.png');">
-                <div class="package-overlay">
+            <div class="package-card">
+                <img src="diamond.png" alt="Paket Diamond" class="package-image">
+                <div class="package-content">
+                    <h3 class="package-title-text">PAKET DIAMOND</h3>
+                    <p class="package-subtitle">PT RA FARM INDONESIA</p>
                     <a href="https://wa.me/6285825408081?text=Halo%20Admin%2C%20saya%20tertarik%20dengan%20PAKET%20DIAMOND%20(Rp%205.500.000)" target="_blank" class="btn-select">
                         Klik / Pilih Paket DIAMOND
                     </a>
@@ -412,8 +454,11 @@
             </div>
 
             <!-- SUPER VVIP -->
-            <div class="package-card" style="background-image: url('super%20vvip.png');">
-                <div class="package-overlay">
+            <div class="package-card">
+                <img src="super%20vvip.png" alt="Paket Super VVIP" class="package-image">
+                <div class="package-content">
+                    <h3 class="package-title-text">PAKET SUPER VVIP</h3>
+                    <p class="package-subtitle">PT RA FARM INDONESIA</p>
                     <a href="https://wa.me/6285825408081?text=Halo%20Admin%2C%20saya%20tertarik%20dengan%20PAKET%20SUPER%20VVIP%20(Rp%2010.000.000)" target="_blank" class="btn-select">
                         Klik / Pilih Paket SUPER VVIP
                     </a>
