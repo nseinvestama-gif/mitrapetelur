@@ -198,104 +198,319 @@
             </a>
 
             <!-- Paket Section -->
-            <h2 style="color: white; font-size: 18px; margin: 20px 0 10px; text-align: center; font-weight: 600;">PAKET KEMITRAAN</h2>
+            <h2 style="color: white; font-size: 24px; margin: 30px 0 20px; text-align: center; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">PILIHAN PAKET INVESTASI</h2>
 
-            <div class="link-card" style="flex-direction: column; align-items: flex-start; text-align: left; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                    <strong style="font-size: 16px; color: #ff914d;">BRONZE</strong>
-                    <span style="font-size: 12px; background: #ff914d; color: white; padding: 2px 8px; border-radius: 10px;">Best Starter</span>
-                </div>
-                <div style="font-size: 14px; color: white; width: 100%;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                        <span>Modal:</span>
-                        <strong>Rp 1.000.000</strong>
+            <style>
+                .package-card {
+                    width: 100%;
+                    background-image: url('https://images.unsplash.com/photo-1612170153139-6f881d97f1ab?q=80&w=1000&auto=format&fit=crop'); /* Gambar Ayam Petelur */
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    position: relative;
+                    margin-bottom: 20px;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+                    border: 1px solid rgba(255,255,255,0.2);
+                }
+
+                .package-overlay {
+                    background: rgba(0, 0, 0, 0.6); /* Gelap transparan */
+                    padding: 30px 20px;
+                    text-align: center;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .package-title {
+                    font-size: 32px;
+                    font-weight: 800;
+                    margin-bottom: 5px;
+                    text-transform: uppercase;
+                    background: linear-gradient(to bottom, #fff, #ccc);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+                    letter-spacing: 1px;
+                }
+
+                .package-details {
+                    background: rgba(0, 0, 0, 0.4);
+                    padding: 15px;
+                    border-radius: 15px;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    backdrop-filter: blur(5px);
+                    border: 1px solid rgba(255,255,255,0.1);
+                }
+
+                .detail-row {
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                }
+
+                .detail-label {
+                    color: #ddd;
+                    font-weight: 500;
+                }
+
+                .detail-value {
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+                
+                .highlight-value {
+                    color: #ffd700; /* Emas */
+                    font-size: 18px;
+                }
+
+                .features-list {
+                    text-align: left;
+                    font-size: 13px;
+                    margin-top: 15px;
+                    padding-left: 20px;
+                    color: #eee;
+                    line-height: 1.6;
+                }
+
+                .features-list li {
+                    margin-bottom: 4px;
+                }
+
+                .package-footer-title {
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+                }
+
+                .brand-name {
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                    letter-spacing: 2px;
+                    opacity: 0.9;
+                }
+
+                .btn-select {
+                    background: #ff914d;
+                    color: white;
+                    padding: 15px 30px;
+                    border-radius: 50px;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 16px;
+                    width: 100%;
+                    display: block;
+                    transition: transform 0.2s, background 0.2s;
+                    box-shadow: 0 4px 15px rgba(255, 145, 77, 0.4);
+                    border: 2px solid white;
+                }
+
+                .btn-select:hover {
+                    background: #ff7f2a;
+                    transform: scale(1.02);
+                }
+            </style>
+
+            <!-- BRONZE -->
+            <div class="package-card">
+                <div class="package-overlay">
+                    <h3 class="package-title">PAKET BRONZE</h3>
+                    
+                    <div class="package-details">
+                        <div class="detail-row">Modal Awal: <span class="detail-value">Rp 1.000.000</span></div>
+                        <div class="detail-row">Potensi Keuntungan: <span class="detail-value highlight-value">Rp 20.000.000</span></div>
+                        <div class="detail-row" style="margin: 10px 0; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 10px;">
+                            Skema Bagi Hasil: <strong>50% | 50%</strong>
+                        </div>
+                        <div class="detail-row">Investor: <span class="detail-value">Rp 10.000.000</span></div>
+                        <div class="detail-row">Peternak: <span class="detail-value">Rp 10.000.000</span></div>
+
+                        <div style="text-align: left; margin-top: 15px;">
+                            <strong style="color: #ff914d; font-size: 14px;">Keunggulan:</strong>
+                            <ul class="features-list">
+                                <li>Keuntungan tanpa potongan biaya</li>
+                                <li>Pembagian hasil setiap 10 hari sekali</li>
+                                <li>Kontrak jelas 100 Hari (10x panen)</li>
+                                <li>Aman, transparan & terpercaya</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <span>Potensi:</span>
-                        <strong style="color: #4cd964;">Rp 20.000.000</strong>
-                    </div>
+
+                    <div class="package-footer-title">PAKET BRONZE</div>
+                    <div class="brand-name">PT RA FARM INDONESIA</div>
+                    <a href="https://wa.me/6285825408081?text=Halo%20Admin%2C%20saya%20tertarik%20dengan%20PAKET%20BRONZE%20(Rp%201.000.000)" target="_blank" class="btn-select">
+                        Klik / Pilih Paket BRONZE
+                    </a>
                 </div>
             </div>
 
-            <div class="link-card" style="flex-direction: column; align-items: flex-start; text-align: left; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                    <strong style="font-size: 16px; color: #ff914d;">SILVER</strong>
-                </div>
-                <div style="font-size: 14px; color: white; width: 100%;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                        <span>Modal:</span>
-                        <strong>Rp 1.800.000</strong>
+            <!-- SILVER -->
+            <div class="package-card">
+                <div class="package-overlay">
+                    <h3 class="package-title">PAKET SILVER</h3>
+                    
+                    <div class="package-details">
+                        <div class="detail-row">Modal Awal: <span class="detail-value">Rp 1.800.000</span></div>
+                        <div class="detail-row">Potensi Keuntungan: <span class="detail-value highlight-value">Rp 50.000.000</span></div>
+                        <div class="detail-row" style="margin: 10px 0; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 10px;">
+                            Skema Bagi Hasil: <strong>50% | 50%</strong>
+                        </div>
+                        <div class="detail-row">Investor: <span class="detail-value">Rp 25.000.000</span></div>
+                        <div class="detail-row">Peternak: <span class="detail-value">Rp 25.000.000</span></div>
+
+                        <div style="text-align: left; margin-top: 15px;">
+                            <strong style="color: #ff914d; font-size: 14px;">Keunggulan:</strong>
+                            <ul class="features-list">
+                                <li>Keuntungan tanpa potongan biaya</li>
+                                <li>Pembagian hasil setiap 10 hari sekali</li>
+                                <li>Kontrak jelas 100 Hari (10x panen)</li>
+                                <li>Aman, transparan & terpercaya</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <span>Potensi:</span>
-                        <strong style="color: #4cd964;">Rp 50.000.000</strong>
-                    </div>
+
+                    <div class="package-footer-title">PAKET SILVER</div>
+                    <div class="brand-name">PT RA FARM INDONESIA</div>
+                    <a href="https://wa.me/6285825408081?text=Halo%20Admin%2C%20saya%20tertarik%20dengan%20PAKET%20SILVER%20(Rp%201.800.000)" target="_blank" class="btn-select">
+                        Klik / Pilih Paket SILVER
+                    </a>
                 </div>
             </div>
 
-            <div class="link-card" style="flex-direction: column; align-items: flex-start; text-align: left; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                    <strong style="font-size: 16px; color: #ff914d;">GOLD</strong>
-                    <span style="font-size: 12px; background: #ff914d; color: white; padding: 2px 8px; border-radius: 10px;">Popular</span>
-                </div>
-                <div style="font-size: 14px; color: white; width: 100%;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                        <span>Modal:</span>
-                        <strong>Rp 2.500.000</strong>
+            <!-- GOLD -->
+            <div class="package-card">
+                <div class="package-overlay">
+                    <h3 class="package-title">PAKET GOLD</h3>
+                    
+                    <div class="package-details">
+                        <div class="detail-row">Modal Awal: <span class="detail-value">Rp 2.500.000</span></div>
+                        <div class="detail-row">Potensi Keuntungan: <span class="detail-value highlight-value">Rp 80.000.000</span></div>
+                        <div class="detail-row" style="margin: 10px 0; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 10px;">
+                            Skema Bagi Hasil: <strong>50% | 50%</strong>
+                        </div>
+                        <div class="detail-row">Investor: <span class="detail-value">Rp 40.000.000</span></div>
+                        <div class="detail-row">Peternak: <span class="detail-value">Rp 40.000.000</span></div>
+
+                        <div style="text-align: left; margin-top: 15px;">
+                            <strong style="color: #ff914d; font-size: 14px;">Keunggulan:</strong>
+                            <ul class="features-list">
+                                <li>Keuntungan tanpa potongan biaya</li>
+                                <li>Pembagian hasil setiap 10 hari sekali</li>
+                                <li>Kontrak jelas 100 Hari (10x panen)</li>
+                                <li>Aman, transparan & terpercaya</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <span>Potensi:</span>
-                        <strong style="color: #4cd964;">Rp 80.000.000</strong>
-                    </div>
+
+                    <div class="package-footer-title">PAKET GOLD</div>
+                    <div class="brand-name">PT RA FARM INDONESIA</div>
+                    <a href="https://wa.me/6285825408081?text=Halo%20Admin%2C%20saya%20tertarik%20dengan%20PAKET%20GOLD%20(Rp%202.500.000)" target="_blank" class="btn-select">
+                        Klik / Pilih Paket GOLD
+                    </a>
                 </div>
             </div>
 
-            <div class="link-card" style="flex-direction: column; align-items: flex-start; text-align: left; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                    <strong style="font-size: 16px; color: #ff914d;">PLATINUM</strong>
-                </div>
-                <div style="font-size: 14px; color: white; width: 100%;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                        <span>Modal:</span>
-                        <strong>Rp 3.400.000</strong>
+            <!-- PLATINUM -->
+            <div class="package-card">
+                <div class="package-overlay">
+                    <h3 class="package-title">PAKET PLATINUM</h3>
+                    
+                    <div class="package-details">
+                        <div class="detail-row">Modal Awal: <span class="detail-value">Rp 3.400.000</span></div>
+                        <div class="detail-row">Potensi Keuntungan: <span class="detail-value highlight-value">Rp 120.000.000</span></div>
+                        <div class="detail-row" style="margin: 10px 0; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 10px;">
+                            Skema Bagi Hasil: <strong>50% | 50%</strong>
+                        </div>
+                        <div class="detail-row">Investor: <span class="detail-value">Rp 60.000.000</span></div>
+                        <div class="detail-row">Peternak: <span class="detail-value">Rp 60.000.000</span></div>
+
+                        <div style="text-align: left; margin-top: 15px;">
+                            <strong style="color: #ff914d; font-size: 14px;">Keunggulan:</strong>
+                            <ul class="features-list">
+                                <li>Keuntungan tanpa potongan biaya</li>
+                                <li>Pembagian hasil setiap 10 hari sekali</li>
+                                <li>Kontrak jelas 100 Hari (10x panen)</li>
+                                <li>Aman, transparan & terpercaya</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <span>Potensi:</span>
-                        <strong style="color: #4cd964;">Rp 120.000.000</strong>
-                    </div>
+
+                    <div class="package-footer-title">PAKET PLATINUM</div>
+                    <div class="brand-name">PT RA FARM INDONESIA</div>
+                    <a href="https://wa.me/6285825408081?text=Halo%20Admin%2C%20saya%20tertarik%20dengan%20PAKET%20PLATINUM%20(Rp%203.400.000)" target="_blank" class="btn-select">
+                        Klik / Pilih Paket PLATINUM
+                    </a>
                 </div>
             </div>
 
-            <div class="link-card" style="flex-direction: column; align-items: flex-start; text-align: left; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                    <strong style="font-size: 16px; color: #ff914d;">DIAMOND</strong>
-                </div>
-                <div style="font-size: 14px; color: white; width: 100%;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                        <span>Modal:</span>
-                        <strong>Rp 5.500.000</strong>
+            <!-- DIAMOND -->
+            <div class="package-card">
+                <div class="package-overlay">
+                    <h3 class="package-title">PAKET DIAMOND</h3>
+                    
+                    <div class="package-details">
+                        <div class="detail-row">Modal Awal: <span class="detail-value">Rp 5.500.000</span></div>
+                        <div class="detail-row">Potensi Keuntungan: <span class="detail-value highlight-value">Rp 150.000.000</span></div>
+                        <div class="detail-row" style="margin: 10px 0; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 10px;">
+                            Skema Bagi Hasil: <strong>50% | 50%</strong>
+                        </div>
+                        <div class="detail-row">Investor: <span class="detail-value">Rp 75.000.000</span></div>
+                        <div class="detail-row">Peternak: <span class="detail-value">Rp 75.000.000</span></div>
+
+                        <div style="text-align: left; margin-top: 15px;">
+                            <strong style="color: #ff914d; font-size: 14px;">Keunggulan:</strong>
+                            <ul class="features-list">
+                                <li>Keuntungan tanpa potongan biaya</li>
+                                <li>Pembagian hasil setiap 10 hari sekali</li>
+                                <li>Kontrak jelas 100 Hari (10x panen)</li>
+                                <li>Aman, transparan & terpercaya</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <span>Potensi:</span>
-                        <strong style="color: #4cd964;">Rp 150.000.000</strong>
-                    </div>
+
+                    <div class="package-footer-title">PAKET DIAMOND</div>
+                    <div class="brand-name">PT RA FARM INDONESIA</div>
+                    <a href="https://wa.me/6285825408081?text=Halo%20Admin%2C%20saya%20tertarik%20dengan%20PAKET%20DIAMOND%20(Rp%205.500.000)" target="_blank" class="btn-select">
+                        Klik / Pilih Paket DIAMOND
+                    </a>
                 </div>
             </div>
 
-            <div class="link-card" style="flex-direction: column; align-items: flex-start; text-align: left; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                    <strong style="font-size: 16px; color: #ff914d;">SUPER VVIP</strong>
-                    <span style="font-size: 12px; background: #e0ac00; color: white; padding: 2px 8px; border-radius: 10px;">Exclusive</span>
-                </div>
-                <div style="font-size: 14px; color: white; width: 100%;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                        <span>Modal:</span>
-                        <strong>Rp 10.000.000</strong>
+            <!-- SUPER VVIP -->
+            <div class="package-card">
+                <div class="package-overlay">
+                    <h3 class="package-title">PAKET SUPER VVIP</h3>
+                    
+                    <div class="package-details">
+                        <div class="detail-row">Modal Awal: <span class="detail-value">Rp 10.000.000</span></div>
+                        <div class="detail-row">Potensi Keuntungan: <span class="detail-value highlight-value">Rp 300.000.000</span></div>
+                        <div class="detail-row" style="margin: 10px 0; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 10px;">
+                            Skema Bagi Hasil: <strong>50% | 50%</strong>
+                        </div>
+                        <div class="detail-row">Investor: <span class="detail-value">Rp 150.000.000</span></div>
+                        <div class="detail-row">Peternak: <span class="detail-value">Rp 150.000.000</span></div>
+
+                        <div style="text-align: left; margin-top: 15px;">
+                            <strong style="color: #ff914d; font-size: 14px;">Keunggulan:</strong>
+                            <ul class="features-list">
+                                <li>Keuntungan tanpa potongan biaya</li>
+                                <li>Pembagian hasil setiap 10 hari sekali</li>
+                                <li>Kontrak jelas 100 Hari (10x panen)</li>
+                                <li>Aman, transparan & terpercaya</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <span>Potensi:</span>
-                        <strong style="color: #4cd964;">Rp 300.000.000</strong>
-                    </div>
+
+                    <div class="package-footer-title">PAKET SUPER VVIP</div>
+                    <div class="brand-name">PT RA FARM INDONESIA</div>
+                    <a href="https://wa.me/6285825408081?text=Halo%20Admin%2C%20saya%20tertarik%20dengan%20PAKET%20SUPER%20VVIP%20(Rp%2010.000.000)" target="_blank" class="btn-select">
+                        Klik / Pilih Paket SUPER VVIP
+                    </a>
                 </div>
             </div>
             
